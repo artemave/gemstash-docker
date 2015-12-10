@@ -18,7 +18,6 @@ GEM
       thor (~> 0.19)
     lru_redux (1.1.0)
     multipart-post (2.0.0)
-    pg (0.18.4)
     puma (2.15.3)
     rack (1.6.4)
     rack-protection (1.5.3)
@@ -37,7 +36,6 @@ PLATFORMS
 
 DEPENDENCIES
   gemstash
-  pg
 
 BUNDLED WITH
    1.10.6
