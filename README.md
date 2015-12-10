@@ -1,6 +1,8 @@
-# Ruby gems caching proxy
+# Run [gemstash](https://github.com/bundler/gemstash) in docker
 
-For faster `bundle install`
+Gemstash is a ruby gems caching mirror. It speeds up `bundle install` quite a lot.
+
+This repo allows to run it in a docker container.
 
 ## Requirements
 
