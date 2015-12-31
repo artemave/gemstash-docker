@@ -25,7 +25,7 @@ After the server container is started, you can use regular gemstash cli to chang
 # change config
 docker exec -it gemstash_server gemstash setup --redo
 # and don't forget to restart the container afterwards
-docker stop gemstash_server && docker start gemstash_server
+docker restart gemstash_server
 
 # authorize to interact with private gems
 docker exec -it gemstash_server gemstash authorize ...
