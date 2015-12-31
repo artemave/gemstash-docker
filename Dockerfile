@@ -1,3 +1,11 @@
-FROM ruby:2.2-onbuild
+FROM ruby:2.2
 
-CMD ["bundle", "exec", "gemstash", "start", "--no-daemonize", "--config-file=/usr/src/app/gemstash.yml"]
+RUN mkdir /app
+WORKDIR /app
+
+COPY Gemfile ./
+RUN bundle install --retry 3 --jobs 3
+
+COPY . .
+
+CMD ["bundle", "exec", "gemstash", "start", "--no-daemonize"]
