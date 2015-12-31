@@ -34,3 +34,7 @@ docker exec -it gemstash_server gemstash authorize ...
 Note: if you need to run gemstash on another server port, rather than changing config, simply provide different port binding argument to docker run. E.g. `docker run -p '5000:9292' ...` will bind gemstash server to port 5000.
 
 Some other settings (for instance postgres, memcached) might also change the way gemstash_server container is started as you'd likely want to link corresponding docker containers.
+
+### Db backup
+
+https://docs.docker.com/engine/userguide/dockervolumes/#backup-restore-or-migrate-data-volumes
