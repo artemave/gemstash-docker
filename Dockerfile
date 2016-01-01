@@ -1,11 +1,5 @@
-FROM ruby:2.2
+FROM ruby:2.3
 
-RUN mkdir /app
-WORKDIR /app
+RUN gem install --no-ri --no-rdoc gemstash
 
-COPY Gemfile ./
-RUN bundle install --retry 3 --jobs 3
-
-COPY . .
-
-CMD ["bundle", "exec", "gemstash", "start", "--no-daemonize"]
+CMD ["gemstash", "start", "--no-daemonize"]
