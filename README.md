@@ -13,7 +13,8 @@ Docker
 On the server:
 
 ```
-docker create -v /root/.gemstash --name gemstash_data artemave/gemstash
+mkdir -p /root/.gemstash
+docker create -v /root/.gemstash:/home/gemstash/.gemstash --name gemstash_data artemave/gemstash
 docker run -d -p '9292:9292' --restart=always --volumes-from gemstash_data --name gemstash_server artemave/gemstash
 ```
 
